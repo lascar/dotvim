@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/home/toto/noise/noisy_hello-canada/src/backend_core/current/spec/support'
+let g:netrw_dirhist_2='/home/toto/noise/noisy_hello-canada/src/backend_core/current/spec/fixtures'
+let g:netrw_dirhist_3='/home/toto/noise/noisy_hello-canada/src/backend_core/current/spec'

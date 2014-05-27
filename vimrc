@@ -1,11 +1,14 @@
 execute pathogen#infect()
+" colored statusline  Green in normal mode, and Magenta in insert mode
+" first, enable status line always
 set laststatus=2
-set statusline=
-set statusline +=%1*\ %n\ %*            "buffer number
-set statusline +=%4*\ %<%F%*            "full path
-set statusline +=%2*%m%*                "modified flag
-set statusline +=%1*%=%5l%*             "current line
-set statusline +=%2*/%L%*               "total lines
+
+" now set it up to change the status line based on mode
+if version >= 700
+  au InsertEnter * hi StatusLine term=reverse ctermbg=5 gui=undercurl guisp=Magenta
+  au InsertLeave * hi StatusLine term=reverse ctermfg=0 ctermbg=2 gui=bold,reverse
+endif
+set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
 set writebackup
 set backup
 set hidden
@@ -15,6 +18,7 @@ filetype plugin indent on
 filetype on
 let mapleader = ","
 set paste
+set number
 " Put plugins and dictionaries in this dir (also on Windows)
 let vimDir = '$HOME/.vim'
 let &runtimepath.=','.vimDir

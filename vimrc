@@ -40,3 +40,4 @@ if has('persistent_undo')
   let &undodir = myUndoDir
   set undofile
 endif
+noremap <Leader>t :!ctags --tag-relative -Rf.git/tags.$$ --exclude=.git --exclude=log --exclude=public --exclude=app/stylesheets * $(rvm gemset dir)/*;fg;mv .git/tags.$$ .git/tags;rm -f .git/tags.$$<CR><CR>

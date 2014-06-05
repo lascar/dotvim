@@ -16,7 +16,7 @@ set tabstop=2
 set expandtab
 filetype plugin indent on
 filetype on
-let mapleader = ","
+let mapleader = "\"
 set paste
 set number
 " Put plugins and dictionaries in this dir (also on Windows)

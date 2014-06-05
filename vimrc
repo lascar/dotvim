@@ -41,3 +41,5 @@ if has('persistent_undo')
   set undofile
 endif
 noremap <Leader>t :!ctags --tag-relative -Rf.git/tags.$$ --exclude=.git --exclude=log --exclude=public --exclude=app/stylesheets * $(rvm gemset dir)/*;fg;mv .git/tags.$$ .git/tags;rm -f .git/tags.$$<CR><CR>
+nmap <F8> :TagbarToggle<CR>
+nnoremap <silent> <F7> :NERDTreeToggle<CR>

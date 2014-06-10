@@ -34,9 +34,9 @@ if has('syntax') && !exists('g:syntax_on')
   syntax enable
   set  t_Co=256
   colorscheme pencil
-  set background=light
+  "set background=light
   let g:airline_theme = 'pencil'
-  let g:pencil_higher_contrast_ui = 0   " 0=low (def), 1=high
+  "let g:pencil_higher_contrast_ui = 0   " 0=low (def), 1=high
 endif
 if has('persistent_undo')
   let myUndoDir = expand(vimDir . '/undodir')

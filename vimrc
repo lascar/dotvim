@@ -16,7 +16,7 @@ set tabstop=2
 set expandtab
 filetype plugin indent on
 filetype on
-let mapleader = "\"
+let mapleader = "\\"
 set paste
 set number
 " Put plugins and dictionaries in this dir (also on Windows)
@@ -32,6 +32,11 @@ endif
 " Keep undo history across sessions by storing it in a file
 if has('syntax') && !exists('g:syntax_on')
   syntax enable
+  set  t_Co=256
+  colorscheme pencil
+  set background=light
+  let g:airline_theme = 'pencil'
+  let g:pencil_higher_contrast_ui = 0   " 0=low (def), 1=high
 endif
 if has('persistent_undo')
   let myUndoDir = expand(vimDir . '/undodir')

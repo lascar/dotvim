@@ -27,6 +27,11 @@ nnoremap k gk
 nnoremap gj j
 nnoremap gk k
 
+" move between split windows
+map <F3> <C-W><C-W>
+" for choosing buffer
+nnoremap <F5> :buffers<CR>:buffer<Space>
+
 " Put plugins and dictionaries in this dir (also on Windows)
 let vimDir = '$HOME/.vim'
 let &runtimepath.=','.vimDir

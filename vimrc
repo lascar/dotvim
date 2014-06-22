@@ -46,10 +46,6 @@ if has('autocmd')
 endif
 syntax enable
 set  t_Co=256
-colorscheme pencil
-set background=dark
-let g:airline_theme = 'pencil'
-let g:pencil_higher_contrast_ui = 0   " 0=low (def), 1=high
 " Keep undo history across sessions by storing it in a file
 if has('persistent_undo')
   let myUndoDir = expand(vimDir . '/undodir')

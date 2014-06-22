@@ -51,6 +51,8 @@ Delete the relevant section from .git/config
 
 $ git rm --cached bundle/submodule
 
-$ rm -rf .git/modules/submodule_name
+(no trailing slash)
+
+$ rm -rf .git/modules/bundle/submodule
 
 $ rm -rf bundle/submodule

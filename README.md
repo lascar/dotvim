@@ -40,3 +40,17 @@ $ git submodule add https://github.com/tpope/vim-haml.git bundle/vim-haml
 $ git commit . -m "add vim-haml to the submodules"
 
 $ git push -u origin master
+
+remove a submodule (http://davidwalsh.name/git-remove-submodule)
+
+Delete the relevant section from the .gitmodules file. 
+
+$ git add .gitmodules
+
+Delete the relevant section from .git/config
+
+$ git rm --cached bundle/submodule
+
+$ rm -rf .git/modules/submodule_name
+
+$ rm -rf bundle/submodule

@@ -44,14 +44,12 @@ if has('autocmd')
   autocmd Filetype javascript setlocal ts=2 sts=2 sw=2 et
   autocmd Filetype php setlocal ts=4 sts=4 sw=4 et
 endif
-if has('syntax') && !exists('g:syntax_on')
-  syntax enable
-  set  t_Co=256
-  colorscheme pencil
-  "set background=light
-  let g:airline_theme = 'pencil'
-  "let g:pencil_higher_contrast_ui = 0   " 0=low (def), 1=high
-endif
+syntax enable
+set  t_Co=256
+colorscheme pencil
+set background=light
+let g:airline_theme = 'pencil'
+"let g:pencil_higher_contrast_ui = 0   " 0=low (def), 1=high
 " Keep undo history across sessions by storing it in a file
 if has('persistent_undo')
   let myUndoDir = expand(vimDir . '/undodir')

@@ -46,6 +46,9 @@ if has('autocmd')
 endif
 syntax enable
 set  t_Co=256
+" colorscheme en ubuntu
+" blue default desert evening morning pablo shine torte darkblue delek elflord koehler murphy peachpuff ron slate zellner
+colorscheme morning
 " Keep undo history across sessions by storing it in a file
 if has('persistent_undo')
   let myUndoDir = expand(vimDir . '/undodir')

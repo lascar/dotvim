@@ -12,7 +12,6 @@ set statusline=%m%F%h%w\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ 
 set writebackup
 set backup
 set hidden
-set paste
 set number
 set history=1000
 set autoindent
@@ -28,16 +27,16 @@ nnoremap gj j
 nnoremap gk k
 
 " move between split windows
-map <F3> <C-W><C-W>
+nnoremap <silent> <F3> <C-W><C-W>
 " for choosing buffer
-nnoremap <F5> :buffers<CR>:buffer<Space>
+nnoremap <silent> <F5> :buffers<CR>:buffer<Space>
 
 " Put plugins and dictionaries in this dir (also on Windows)
 let vimDir = '$HOME/.vim'
 let &runtimepath.=','.vimDir
 filetype plugin indent on
 filetype on
-let mapleader = "\\"
+let mapleader = "-"
 if has('autocmd')
   filetype plugin indent on
   autocmd Filetype ruby setlocal ts=2 sts=2 sw=2 et
@@ -58,5 +57,10 @@ if has('persistent_undo')
   set undofile
 endif
 noremap <Leader>t :!ctags --tag-relative -Rf.git/tags.$$ --exclude=.git --exclude=log --exclude=public --exclude=app/stylesheets * $(rvm gemset dir)/*;fg;mv .git/tags.$$ .git/tags;rm -f .git/tags.$$<CR><CR>
-nmap <F8> :TagbarToggle<CR>
+nnoremap <silent> <F8> :TagbarToggle<CR>
 nnoremap <silent> <F7> :NERDTreeToggle<CR>
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
+inoremap <c-u> <esc>vawUea
+inoremap <c-l> <esc>vawuea
+iabbrev @@ pascal.carrie@gmail.com

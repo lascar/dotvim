@@ -47,7 +47,13 @@ syntax enable
 set  t_Co=256
 " colorscheme en ubuntu
 " blue default desert evening morning pablo shine torte darkblue delek elflord koehler murphy peachpuff ron slate zellner
-colorscheme morning
+" colorscheme morning
+" codeschool http://astonj.com/wp-content/uploads/2012/06/codeschool.vim2_.zip
+color codeschool
+set guifont=Monaco:h12
+autocmd User Rails let b:surround_{char2nr('-')} = "<% \r %>" " displays <% %> correctly
+:set cpoptions+=$ " puts a $ marker for the end of words/lines in cw/c$ commands
+" end codeschool
 " Keep undo history across sessions by storing it in a file
 if has('persistent_undo')
   let myUndoDir = expand(vimDir . '/undodir')
@@ -56,7 +62,8 @@ if has('persistent_undo')
   let &undodir = myUndoDir
   set undofile
 endif
-noremap <Leader>t :!ctags --tag-relative -Rf.git/tags.$$ --exclude=.git --exclude=log --exclude=public --exclude=app/stylesheets * $(rvm gemset dir)/*;fg;mv .git/tags.$$ .git/tags;rm -f .git/tags.$$<CR><CR>
+" noremap <Leader>t :!ctags --tag-relative -Rf.git/tags.$$ --exclude=.git --exclude=log --exclude=public --exclude=node_modules --exclude=app/stylesheets * $(echo $GEM_HOME)/*;fg;mv .git/tags.$$ .git/tags;rm -f .git/tags.$$<CR><CR>
+noremap <Leader>t :!ctags --tag-relative -Rf.git/tags.$$ --exclude=.git --exclude=log --exclude=public --exclude=node_modules --exclude=app/stylesheets * $(echo $GEM_HOME)/*;fg;mv .git/tags.$$ .git/tags;rm -f .git/tags.$$<CR><CR>
 nnoremap <silent> <F8> :TagbarToggle<CR>
 nnoremap <silent> <F7> :NERDTreeToggle<CR>
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>

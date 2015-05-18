@@ -40,8 +40,10 @@ let mapleader = "-"
 if has('autocmd')
   filetype plugin indent on
   autocmd Filetype ruby setlocal ts=2 sts=2 sw=2 et
-  autocmd Filetype javascript setlocal ts=2 sts=2 sw=2 et
   autocmd Filetype php setlocal ts=4 sts=4 sw=4 et
+  autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
+  autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
+  autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr> v
 endif
 syntax enable
 set  t_Co=256

@@ -59,4 +59,4 @@ $ rm -rf bundle/submodule
 
 use the function Str('somethings') in insert mode to insert :
 console.log('somethings : ' + JSON.stringify(somethings));
-in insert mode => <c-R>Str('somethings')<enter>
+in insert mode => <c-R>=Str('somethings')<enter>

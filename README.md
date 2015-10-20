@@ -56,3 +56,7 @@ $ git rm --cached bundle/submodule
 $ rm -rf .git/modules/bundle/submodule
 
 $ rm -rf bundle/submodule
+
+use the function Str('somethings') in insert mode to insert :
+console.log('somethings : ' + JSON.stringify(somethings));
+in insert mode => <c-R>Str('somethings')<enter>

@@ -23,7 +23,10 @@ set softtabstop=2
 set wrap
 
 " move between split windows
+nnoremap <silent> <F2> <C-W><C-S> 
 nnoremap <silent> <F3> <C-W><C-W>
+nnoremap <silent> <F4> <C-W>o
+nnoremap <silent> <F6> <C-W>r
 " for choosing buffer
 nnoremap <silent> <F5> :buffers<CR>:buffer<Space>
 nnoremap <silent> <F12> :bn<CR>
@@ -31,7 +34,7 @@ nnoremap <silent> <F12> :bn<CR>
 " Put plugins and dictionaries in this dir (also on Windows)
 let vimDir = '$HOME/.vim'
 let &runtimepath.=','.vimDir
-let mapleader = "-"
+let mapleader = ","
 " Vimscript file setting ------------------ {{{
 augroup filetype_vim
   if has('autocmd')

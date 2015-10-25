@@ -51,17 +51,16 @@ augroup filetype_vim
   endif
 augroup END
 " }}}
-syntax enable
-set  t_Co=256
 " http://astonj.com/wp-content/uploads/2012/06/codeschool.vim2_.zip
 " codeschool ---------------------------- {{{
 augroup codeschool
   color codeschool
-  set guifont=Monaco:h12
   autocmd User Rails let b:surround_{char2nr('-')} = "<% \r %>" " displays <% %> correctly
   :set cpoptions+=$ " puts a $ marker for the end of words/lines in cw/c$ commands
 augroup END
 " }}}
+syntax enable
+set  t_Co=256
 " Keep undo history across sessions by storing it in a file
 " persistent_undo ---------------------------- {{{
 augroup persistent_undo

@@ -22,17 +22,16 @@ set softtabstop=2
 " long line wrap but move on jk on visual line, g to switch to default behaviour
 set wrap
 
-" move between split windows
+" move between split windows ------------------ {{{
 nnoremap <silent> <F2> <C-W><C-S> 
 nnoremap <silent> <F3> <C-W><C-W>
 nnoremap <silent> <F4> <C-W>o
-nnoremap <silent> <F6> <C-W>r
-" for choosing buffer
 nnoremap <silent> <F5> :buffers<CR>:buffer<Space>
+nnoremap <silent> <F6> <C-W>r
 nnoremap <silent> <F12> :bn<CR>
-
+" }}}
 " Put plugins and dictionaries in this dir (also on Windows)
-let vimDir = '$HOME/.vim'
+let vimDir = '$HOME/dotvim'
 let &runtimepath.=','.vimDir
 let mapleader = ","
 " Vimscript file setting ------------------ {{{
@@ -73,6 +72,7 @@ augroup persistent_undo
   endif
 augroup END
 " }}}
+nnoremap Q <Nop>
 noremap <Leader>t :!ctags --tag-relative -Rf.git/tags.$$ --exclude=.git --exclude=log --exclude=public --exclude=node_modules --exclude=app/stylesheets * $(echo $GEM_HOME)/*;fg;mv .git/tags.$$ .git/tags;rm -f .git/tags.$$<CR><CR>
 nnoremap <silent> <F8> :TagbarToggle<CR>
 nnoremap <silent> <F7> :NERDTreeToggle<CR>
@@ -85,5 +85,3 @@ function Str(str)
   let b:str = "console.log('" . a:str . " : ' + JSON.stringify(" . a:str . "));"
   return b:str
 endfunction
-iabbrev str JSON.stringify
-inoremap <F2> <C-R>=Str('toto')<C-M>

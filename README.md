@@ -18,17 +18,6 @@ $ git submodule init
 $ git submodule update
 
 
-para los tags
-$ sudo aptitude install exuberant-ctags
-
-$ cd ~/dotvim/doc
-
-abrir el vim
-y ejectuar
-:helptags .
-(no olvidar el punto final)
-
-
 to update each module
 
 $ git submodule foreach git pull origin master

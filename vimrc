@@ -22,6 +22,7 @@ set softtabstop=2
 " long line wrap but move on jk on visual line, g to switch to default behaviour
 set wrap
 
+" za to expand or close fold
 " move between split windows ------------------ {{{
 nnoremap <silent> <F2> <C-W><C-S> 
 nnoremap <silent> <F3> <C-W><C-W>
@@ -33,7 +34,7 @@ nnoremap <silent> <F12> :bn<CR>
 " Put plugins and dictionaries in this dir (also on Windows)
 let vimDir = '$HOME/dotvim'
 let &runtimepath.=','.vimDir
-let mapleader = ","
+let mapleader = "\<Space>"
 " Vimscript file setting ------------------ {{{
 augroup filetype_vim
   if has('autocmd')
@@ -41,12 +42,10 @@ augroup filetype_vim
     filetype plugin indent on
     autocmd Filetype vim setlocal foldmethod=marker
     autocmd Filetype ruby setlocal ts=2 sts=2 sw=2 et
+    autocmd Filetype python setlocal ts=4 sts=4 sw=4 et
     autocmd Filetype html setlocal ts=4 sts=4 sw=4 et
     autocmd Filetype javascript setlocal ts=4 sts=4 sw=4 et
     autocmd Filetype php setlocal ts=4 sts=4 sw=4 et
-    autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
-    autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
-    autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr> v
   endif
 augroup END
 " }}}
@@ -73,9 +72,6 @@ augroup persistent_undo
 augroup END
 " }}}
 nnoremap Q <Nop>
-noremap <Leader>t :!ctags --tag-relative -Rf.git/tags.$$ --exclude=.git --exclude=log --exclude=public --exclude=node_modules --exclude=app/stylesheets * $(echo $GEM_HOME)/*;fg;mv .git/tags.$$ .git/tags;rm -f .git/tags.$$<CR><CR>
-nnoremap <silent> <F8> :TagbarToggle<CR>
-nnoremap <silent> <F7> :NERDTreeToggle<CR>
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 inoremap <c-u> <esc>vawUea

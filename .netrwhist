@@ -1,4 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='/home/toto/noise/noisy_frontend_box/src/backend_core/current/lib/tasks'
 let g:netrw_dirhist_2='/home/toto/noise/noisy_frontend_box/src/backend_core/current/lib'
+let g:netrw_dirhist_3='/home/pascal/oyatis/oyatis-ng'
+let g:netrw_dirhist_4='/home/pascal/oyatis/oyatis-ng/assets'
+let g:netrw_dirhist_5='/home/pascal/oyatis/oyatis-ng/assets/javascripts'
+let g:netrw_dirhist_6='/home/pascal/oyatis/oyatis-ng/assets/javascripts/controllers'

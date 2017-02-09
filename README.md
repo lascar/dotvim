@@ -49,3 +49,10 @@ $ rm -rf bundle/submodule
 use the function Str('somethings') in insert mode to insert :
 console.log('somethings : ' + JSON.stringify(somethings));
 in insert mode => <c-R>=Str('somethings')<enter>
+
+in a git repository, in order to use fugitive  
+
+$ git config --global mergetool.fugitive.cmd 'vim -f -c "Gdiff" "$MERGED"'
+
+$ git config --global merge.tool fugitive
+

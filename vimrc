@@ -21,7 +21,8 @@ set tabstop=2
 set softtabstop=2
 " long line wrap but move on jk on visual line, g to switch to default behaviour
 set wrap
-
+" vim fugitive
+set diffopt+=vertical
 " za to expand or close fold
 " move between split windows ------------------ {{{
 nnoremap <silent> <F2> <C-W><C-S> 

@@ -24,6 +24,16 @@ set wrap
 " vim fugitive
 set diffopt+=vertical
 " za to expand or close fold
+" dotvim as vimdir and leader key ------------------ {{{
+let vimDir = '$HOME/dotvim'
+let &runtimepath.=','.vimDir
+let mapleader = "\<Space>"
+" }}}
+" nerdtree and ctags ------------------ {{{
+noremap <silent> <F9> :!ctags --tag-relative -Rf.git/tags.$$ --exclude=.git --exclude=log --exclude=public --exclude=node_modules --exclude=app/stylesheets * $(echo $GEM_HOME)/*;fg;mv .git/tags.$$ .git/tags;rm -f .git/tags.$$<CR><CR>
+nnoremap <silent> <F8> :TagbarToggle<CR>
+nnoremap <silent> <F7> :NERDTreeToggle<CR>
+" }}}
 " move between split windows ------------------ {{{
 nnoremap <silent> <F2> <C-W><C-S> 
 nnoremap <silent> <F3> <C-W><C-W>
@@ -32,10 +42,6 @@ nnoremap <silent> <F5> :buffers<CR>:buffer<Space>
 nnoremap <silent> <F6> <C-W>r
 nnoremap <silent> <F12> :bn<CR>
 " }}}
-" Put plugins and dictionaries in this dir (also on Windows)
-let vimDir = '$HOME/dotvim'
-let &runtimepath.=','.vimDir
-let mapleader = "\<Space>"
 " Vimscript file setting ------------------ {{{
 augroup filetype_vim
   if has('autocmd')

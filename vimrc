@@ -1,4 +1,5 @@
 execute pathogen#infect()
+set sessionoptions-=options
 
 " colored statusline  Green in normal mode, and Magenta in insert mode
 " first, enable status line always

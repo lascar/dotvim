@@ -42,10 +42,10 @@ in insert mode =>
 
 # the shortcut in vimrc
 
-<F2> split horizontal window
-<F3> toogle active window
-<F4> unsplit windows
-<F5> list of buffer and if a buffer in given toogle to this buffer
-<F7> list of files in directory (nerdtree)
-<F8> list of tags (exuberant_tags)
-<F9> create or refresh the tags list (in .git)
+* \<F2> split horizontal window
+* \<F3> toogle active window
+* \<F4> unsplit windows
+* \<F5> list of buffer and if a buffer in given toogle to this buffer
+* \<F7> list of files in directory (nerdtree)
+* \<F8> list of tags (exuberant_tags)
+* \<F9> create or refresh the tags list (in .git)

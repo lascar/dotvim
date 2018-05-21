@@ -37,12 +37,12 @@ nnoremap <silent> <F8> :TagbarToggle<CR>
 nnoremap <silent> <F7> :NERDTreeToggle<CR>
 " }}}
 " move between split windows ------------------ {{{
-nnoremap <silent> <F2> <C-W><C-S> 
-nnoremap <silent> <F3> <C-W><C-W>
-nnoremap <silent> <F4> <C-W>o
-nnoremap <silent> <F5> :buffers<CR>:buffer<Space>
-nnoremap <silent> <F6> <C-W>r
-nnoremap <silent> <F12> :bn<CR>
+nnoremap <silent> <leader>2 <C-W><C-S>
+nnoremap <silent> <leader>3 <C-W><C-W>
+nnoremap <silent> <leader>4 <C-W>o
+nnoremap <silent> <leader>5 :buffers<CR>:buffer<Space>
+nnoremap <silent> <leader>6 <C-W>r
+nnoremap <silent> <leader>9:bn<CR>
 " }}}
 " Vimscript file setting ------------------ {{{
 augroup filetype_vim

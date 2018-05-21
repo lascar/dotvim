@@ -42,7 +42,7 @@ nnoremap <silent> <leader>3 <C-W><C-W>
 nnoremap <silent> <leader>4 <C-W>o
 nnoremap <silent> <leader>5 :buffers<CR>:buffer<Space>
 nnoremap <silent> <leader>6 <C-W>r
-nnoremap <silent> <leader>9:bn<CR>
+nnoremap <silent> <leader>9 :bn<CR>
 " }}}
 " Vimscript file setting ------------------ {{{
 augroup filetype_vim

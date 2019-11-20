@@ -21,6 +21,7 @@ obtienes un archivo dotvim
 
 <pre>
    git submodule init
+   git submodule update --init --recursive
 </pre>
 
 to update each module

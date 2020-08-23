@@ -48,6 +48,7 @@ nnoremap <silent> <leader>9 :bn<CR>
 augroup filetype_vim
   if has('autocmd')
     autocmd!
+    filetype on
     filetype plugin indent on
     autocmd Filetype vim setlocal foldmethod=marker
     autocmd Filetype ruby setlocal ts=2 sts=2 sw=2 et
@@ -86,6 +87,14 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 inoremap <c-u> <esc>vawUea
 inoremap <c-l> <esc>vawuea
 iabbrev @@ pascal.carrie@gmail.com
+function Pry_view()
+  let b:str = "<% binding.pry %>"
+  return b:str
+endfunction
+function Pry()
+  let b:str = "binding.pry"
+  return b:str
+endfunction
 function Str(str)
   let b:str = "console.log('" . a:str . " : ' + JSON.stringify(" . a:str . "));"
   return b:str

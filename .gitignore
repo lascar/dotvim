@@ -4,3 +4,8 @@
 
 undodir/*
 .netrwhist
+bundle/nerdtree
+bundle/tagbar
+bundle/vim-abolish
+bundle/vim-fugitive
+bundle/vim-rails

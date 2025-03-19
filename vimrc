@@ -1,3 +1,8 @@
+" let g:augment_workspace_folders = ['/home/pascal/for_django/facturaion']
+let g:augment_workspace_folders = ['/home/pascal/bo.facile']
+call plug#begin()
+Plug 'augmentcode/augment.vim'
+call plug#end()
 execute pathogen#infect()
 set sessionoptions-=options
 

@@ -20,3 +20,7 @@
 	ignore = untracked
 [submodule "vim-rails"]
 	ignore = untracked
+[submodule "pack/augment/start/augment"]
+	path = pack/augment/start/augment.vim
+	url = https://github.com/augmentcode/augment.vim.git
+	branch = main
